@@ -5,6 +5,8 @@ namespace VRTK
 {
     public class Sphere : VRTK_InteractableObject
     {
+        public GameObject roomManager;
+        private bool activated = false;
         // Use this for initialization
         void Start()
         {
@@ -19,10 +21,19 @@ namespace VRTK
         protected override void Update()
         {
             base.Update();
-            if (IsUsing() && GetUsingObject().GetComponent<VRTK_ControllerEvents>().triggerPressed)
+            if (!activated && IsUsing() &&
+                GetUsingObject().GetComponent<VRTK_ControllerEvents>().triggerTouched)
             {
-                Debug.Log("BOOM!");
-                Destroy(this.gameObject);
+                // Update to generealize lab manager object
+                roomManager.GetComponent<LabManager>().inactiveSphereCount = -1; 
+                Debug.Log(string.Format("BOOM! {0} spheres left", roomManager.GetComponent<LabManager>().inactiveSphereCount));
+
+                // Change colors
+                Renderer rend = GetComponent<Renderer>();
+                rend.material.shader = Shader.Find("Standard");
+                rend.material.SetColor("_EmissionColor", Color.cyan);
+
+                activated = true;
             }
         }
     }

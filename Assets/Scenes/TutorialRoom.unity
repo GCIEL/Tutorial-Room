@@ -3771,7 +3771,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 678521276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.37, y: 1.36, z: 1}
+  m_LocalPosition: {x: 2.109, y: -0.02, z: 1.076}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children: []
   m_Father: {fileID: 1465785523}
@@ -3846,7 +3846,7 @@ MonoBehaviour:
   allowedTouchControllers: 0
   ignoredColliders: []
   isGrabbable: 0
-  holdButtonToGrab: 0
+  holdButtonToGrab: 1
   stayGrabbedOnTeleport: 0
   validDrop: 1
   grabOverrideButton: 0
@@ -3860,6 +3860,7 @@ MonoBehaviour:
   useOverrideButton: 0
   allowedUseControllers: 0
   usingState: 0
+  roomManager: {fileID: 1815185457}
 --- !u!1 &690329116
 GameObject:
   m_ObjectHideFlags: 0
@@ -3878,7 +3879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &690329117
 Transform:
   m_ObjectHideFlags: 0
@@ -3969,12 +3970,13 @@ MonoBehaviour:
   grabAttachMechanicScript: {fileID: 0}
   secondaryGrabActionScript: {fileID: 0}
   isUsable: 0
-  holdButtonToUse: 1
+  holdButtonToUse: 0
   useOnlyIfGrabbed: 0
-  pointerActivatesUseAction: 0
+  pointerActivatesUseAction: 1
   useOverrideButton: 0
   allowedUseControllers: 0
   usingState: 0
+  roomManager: {fileID: 1815185457}
 --- !u!1 &710298014
 GameObject:
   m_ObjectHideFlags: 0
@@ -10087,6 +10089,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1815185458}
+  - component: {fileID: 1815185459}
   m_Layer: 0
   m_Name: Lab
   m_TagString: Untagged
@@ -10112,6 +10115,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1815185459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1815185457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7860fa9f315dda5478531e39a5883bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1823380697
 GameObject:
   m_ObjectHideFlags: 0
@@ -11346,7 +11360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1983041594
 Transform:
   m_ObjectHideFlags: 0
@@ -11437,12 +11451,13 @@ MonoBehaviour:
   grabAttachMechanicScript: {fileID: 0}
   secondaryGrabActionScript: {fileID: 0}
   isUsable: 0
-  holdButtonToUse: 1
+  holdButtonToUse: 0
   useOnlyIfGrabbed: 0
-  pointerActivatesUseAction: 0
+  pointerActivatesUseAction: 1
   useOverrideButton: 0
   allowedUseControllers: 0
   usingState: 0
+  roomManager: {fileID: 1815185457}
 --- !u!1 &1983252603
 GameObject:
   m_ObjectHideFlags: 0
