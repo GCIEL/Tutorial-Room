@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LabManager : MonoBehaviour {
 
+    public GameObject leftController;
+    public GameObject rightController;
     private int _inactiveSphereCount;
     public int inactiveSphereCount
     {

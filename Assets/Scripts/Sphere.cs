@@ -10,7 +10,11 @@ namespace VRTK
         // Use this for initialization
         void Start()
         {
-
+            // Add appropriate error checks
+            roomManager.GetComponent<LabManager>().rightController.GetComponent<VRTK_ControllerEvents>().TriggerPressed +=
+                new ControllerInteractionEventHandler(Activate);
+            roomManager.GetComponent<LabManager>().leftController.GetComponent<VRTK_ControllerEvents>().TriggerPressed +=
+                new ControllerInteractionEventHandler(Activate);
         }
 
         public override void StartUsing(VRTK_InteractUse usingObject)
@@ -18,14 +22,23 @@ namespace VRTK
             base.StartUsing(usingObject);
         }
 
+        public override void StopUsing(VRTK_InteractUse usingObject)
+        {
+            base.StopUsing(usingObject);
+        }
+
         protected override void Update()
         {
             base.Update();
-            if (!activated && IsUsing() &&
-                GetUsingObject().GetComponent<VRTK_ControllerEvents>().triggerTouched)
+            
+        }
+
+        private void Activate(object sender, ControllerInteractionEventArgs e)
+        {
+            if (!activated && IsUsing())
             {
                 // Update to generealize lab manager object
-                roomManager.GetComponent<LabManager>().inactiveSphereCount = -1; 
+                roomManager.GetComponent<LabManager>().inactiveSphereCount = -1;
                 Debug.Log(string.Format("BOOM! {0} spheres left", roomManager.GetComponent<LabManager>().inactiveSphereCount));
 
                 // Change colors
