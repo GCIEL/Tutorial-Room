@@ -3854,7 +3854,7 @@ MonoBehaviour:
   grabAttachMechanicScript: {fileID: 0}
   secondaryGrabActionScript: {fileID: 0}
   isUsable: 0
-  holdButtonToUse: 0
+  holdButtonToUse: 1
   useOnlyIfGrabbed: 0
   pointerActivatesUseAction: 1
   useOverrideButton: 0
@@ -3970,7 +3970,7 @@ MonoBehaviour:
   grabAttachMechanicScript: {fileID: 0}
   secondaryGrabActionScript: {fileID: 0}
   isUsable: 0
-  holdButtonToUse: 0
+  holdButtonToUse: 1
   useOnlyIfGrabbed: 0
   pointerActivatesUseAction: 1
   useOverrideButton: 0
@@ -10126,6 +10126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7860fa9f315dda5478531e39a5883bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftController: {fileID: 1814976200}
+  rightController: {fileID: 1983897342}
 --- !u!1 &1823380697
 GameObject:
   m_ObjectHideFlags: 0
@@ -11451,7 +11453,7 @@ MonoBehaviour:
   grabAttachMechanicScript: {fileID: 0}
   secondaryGrabActionScript: {fileID: 0}
   isUsable: 0
-  holdButtonToUse: 0
+  holdButtonToUse: 1
   useOnlyIfGrabbed: 0
   pointerActivatesUseAction: 1
   useOverrideButton: 0
